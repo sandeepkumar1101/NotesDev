@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+    client:
+      build: ./client
+      ports:
+        - "5173:5173"
+      depends_on:
+        - server
+    server:
+      build: ./server
+      ports:
+        - "5178:5178"
+      environment:
+      - PORT=5178
+      - MONGO_URL=mongodb+srv://akshay:sandybest@cluster0.tr0jgyu.mongodb.net/?retryWrites=true&w=majority
