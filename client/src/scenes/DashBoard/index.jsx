@@ -102,7 +102,7 @@ const EditNotes = ({ setIsEditClicked, id }) => {
 
   useEffect(() => {
     const getNote = async () => {
-      const data = await fetch(`http://localhost:5178/notes//get/${id}`, {
+      const data = await fetch(`http://localhost:5178/notes/get/${id}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
